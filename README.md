@@ -2,6 +2,14 @@
 Bash Cheat Sheet with the most needed stuff..
 
 
+
+## variables
+```bash
+INTRO=./intros/*
+CPUCORES=1
+```
+
+
 ## cd current directory
 ```bash
 cd "$(dirname "$0")"
