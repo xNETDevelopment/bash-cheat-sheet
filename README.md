@@ -31,3 +31,29 @@ printf "\n"
 
 <br />
 <br />
+
+# Loops
+
+
+## Select files from folder
+```bash
+
+SRC=/home/t33n/Downloads/vidz/*
+
+for FILE in $SRC
+do
+
+        filepath=$FILE
+        echo "Current file path: $filepath"
+
+        filename=$(basename -- "$FILE")
+        echo "Current FULL file name: $filename"
+
+        extension=${filename##*.}
+        echo "Current file extension: $extension"
+
+
+done
+echo "font for loop was done.."
+```
+
