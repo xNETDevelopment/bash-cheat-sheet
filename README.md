@@ -8,9 +8,6 @@ Bash Cheat Sheet with the most needed stuff..
 ```bash
 # method 1 (you can basicly use any terminal emulator for this)
 gnome-terminal -- yourscript.sh
-
-# method 2
-bash yourscript.sh
 ```
 
 
