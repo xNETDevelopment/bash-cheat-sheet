@@ -66,11 +66,18 @@ printf "\n"
 
 # Loops
 
+## for loop array
+```bash
+for i in "${arrayName[@]}"
+do
+   # do whatever on $i
+done
+```
 
 ## Select files from folder
 ```bash
 
-SRC=/home/t33n/Downloads/vidz/*
+SRC=/home/username/Downloads/vids/*
 
 for FILE in $SRC
 do
