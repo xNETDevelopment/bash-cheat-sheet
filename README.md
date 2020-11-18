@@ -22,6 +22,25 @@ printf "\n match: ${BASH_REMATCH[0]}";
 <br />
 <br />
 
+# Replace
+
+## Replace text and create new variable
+```bash
+PROJECTNAME=$(echo ${BASH_REMATCH[0]} | sed 's/.git//g')
+```
+
+
+<br />
+<br />
+
+
+ _____________________________________________________
+ _____________________________________________________
+
+
+<br />
+<br />
+
 ## Open script in new window
 ```bash
 # method 1 (you can basicly use any terminal emulator for this)
