@@ -3,6 +3,24 @@ Bash Cheat Sheet with the most needed stuff..
 
 
 
+# regex
+
+## match something and return to variable
+```bash
+[[ $line =~ \/(.*).git ]] && echo ${BASH_REMATCH[0]};
+printf "\n match: ${BASH_REMATCH[0]}";
+```
+
+<br />
+<br />
+
+
+ _____________________________________________________
+ _____________________________________________________
+
+
+<br />
+<br />
 
 ## Open script in new window
 ```bash
