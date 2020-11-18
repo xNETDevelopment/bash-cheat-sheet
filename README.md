@@ -7,7 +7,7 @@ Bash Cheat Sheet with the most needed stuff..
 
 ## match something and return to variable
 ```bash
-[[ $line =~ \/(.*).git ]] && echo ${BASH_REMATCH[0]};
+[[ $line =~ \/(.*).git ]]
 printf "\n match: ${BASH_REMATCH[0]}";
 ```
 
