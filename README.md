@@ -30,6 +30,17 @@ INTRO=./intros/*
 CPUCORES=1
 ```
 
+<br><br>
+
+
+## use home path in variable (**$HOME**)
+```bash
+EXPORT_PATH="$HOME/Documents"
+cd "$EXPORT_PATH"
+```
+
+<br><br>
+
 
 ## cd current directory
 ```bash
