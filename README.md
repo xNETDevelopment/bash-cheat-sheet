@@ -113,13 +113,7 @@ done
 ```bash
 for i in "${arrayName[@]}"
 do
-
-  # do something in here
-  git commit --allow-empty -a -m "Cron Job Mirror"
-  
-  # end the last line with & to skip the waiting process and go to the next process.
-  # However this is only usefully if you do not have to wait for something to be done.
-  # Alternative you can && to wait until a process is done.
+  git commit --allow-empty -a -m "Cron Job Mirror" &&
   git push &
 done
 wait # wait for all remaining workers
