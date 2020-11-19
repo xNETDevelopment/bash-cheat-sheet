@@ -99,7 +99,7 @@ pwd
 <br />
 <br />
 
-# Loops
+# Iterate
 
 ## for loop array
 ```bash
@@ -108,6 +108,21 @@ do
    # do whatever on $i
 done
 ```
+
+## parallel (async) for loop
+```bash
+for i in "${arrayName[@]}"
+do
+
+  # do something in here
+  git commit --allow-empty -a -m "Cron Job Mirror"
+  
+  git push & # end the last line with &
+done
+wait # wait for all remaining workers
+```
+
+
 
 ## Select files from folder
 ```bash
