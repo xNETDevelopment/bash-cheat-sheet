@@ -3,6 +3,26 @@ Bash Cheat Sheet with the most needed stuff..
 
 
 
+<br><br>
+
+
+## cd current directory
+```bash
+cd "$(dirname "$0")"; printf "\nCurrent working directory:"; pwd
+```
+
+<br />
+<br />
+
+
+ _____________________________________________________
+ _____________________________________________________
+
+
+<br />
+<br />
+
+
 # regex
 
 ## match something and return to variable
@@ -61,10 +81,16 @@ gnome-terminal -- yourscript.sh
 <br />
 
 
-## variables
+# variables
 ```bash
 INTRO=./intros/*
 CPUCORES=1
+```
+
+
+## create variable of echo
+```bash
+a=$(echo '111 222 33' | awk '{print $3;}' )
 ```
 
 <br><br>
@@ -75,18 +101,6 @@ CPUCORES=1
 EXPORT_PATH="$HOME/Documents"
 cd "$EXPORT_PATH"
 ```
-
-<br><br>
-
-
-## cd current directory
-```bash
-cd "$(dirname "$0")"
-printf "\nCurrent working directory:"
-pwd
-```
-
-
 
 <br />
 <br />
