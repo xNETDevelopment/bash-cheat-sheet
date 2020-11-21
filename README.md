@@ -198,13 +198,19 @@ done
 ```
 
 ## parallel (async) for loop
+
 ```bash
-for i in "${arrayName[@]}"
+test(){
+  sample="sample.."
+  sample2="$1"
+  # and other complex stuff..
+}
+
+for d in "${arrayName[@]}"
 do
-  git commit --allow-empty -a -m "Cron Job Mirror" &&
-  git push &
+  test $d &
 done
-wait # wait for all remaining workers
+wait
 ```
 
 
