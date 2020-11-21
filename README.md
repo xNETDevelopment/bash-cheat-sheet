@@ -251,6 +251,7 @@ echo "font for loop was done.."
 
 ## if else
 ``` bash
+# method 1
 if [ $introname = "green" ]; then
 
                    AUDIOSRC=./audio/delay/green/*
@@ -267,6 +268,9 @@ else
                    echo "Current audio source folder: $AUDIOSRC"
 
 fi
+
+# method 2 - 1 liner if else
+[ -d $REPONAME ] && repoExist || repoNotExist;
 ```
 
 ## check if folder exist (-d)
@@ -301,8 +305,8 @@ if [ ! -d "$PROJECTNAME" ]
 fi
 ```
 
-<br />
-<br />
+
+<br><br>
 
 
  _____________________________________________________
