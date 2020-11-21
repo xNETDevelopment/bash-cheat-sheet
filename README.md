@@ -8,14 +8,10 @@ Bash Cheat Sheet with the most needed stuff..
 
 # delete
 
-## remove files
+## remove files/folder
 ```bash
 git rm -f sample.txt
-```
-
-## remove folder
-```bash
-git rmdir -f sample.txt
+git rm -f folder
 ```
 
 
