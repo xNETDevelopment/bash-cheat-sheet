@@ -228,9 +228,17 @@ fi
 
 ## check if folder exist
 ``` bash
-if [ -d "./$PROJECTNAME" ]
+if [ -d "$PROJECTNAME" ]
   then printf "\n Repo $PROJECTNAME folder already exist..\n"
   else printf "\n Repo $PROJECTNAME folder does not exist..\n"
+fi
+```
+
+## check if file exist
+``` bash
+if [ -d "sample.txt" ]
+  then printf "\n sample.txt already exist..\n"
+  else printf "\n sample.txt does not exist..\n"
 fi
 ```
 
