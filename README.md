@@ -249,18 +249,26 @@ fi
 
 ## check if folder exist (-d)
 ``` bash
+# method 1
 if [ -d "$PROJECTNAME" ]
   then printf "\n Repo $PROJECTNAME folder already exist..\n"
   else printf "\n Repo $PROJECTNAME folder does not exist..\n"
 fi
+
+# method 2
+[ -d $PROJECTNAME/.git ] && rm -rf $PROJECTNAME/.git;
 ```
 
 ## check if file exist (-f)
 ``` bash
+# method 1
 if [ -f "sample.txt" ]
   then printf "\n sample.txt already exist..\n"
   else printf "\n sample.txt does not exist..\n"
 fi
+
+# method 2
+[ -f $PROJECTNAME/.sample.txt ] && rm -f $PROJECTNAME/.sample.txt;
 ```
 
 ## check if folder not exist
