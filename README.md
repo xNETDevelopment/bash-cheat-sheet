@@ -6,6 +6,31 @@ Bash Cheat Sheet with the most needed stuff..
 <br><br>
 
 
+# delete
+
+## remove files
+```bash
+git rm -f sample.txt
+```
+
+## remove folder
+```bash
+git rmdir -f sample.txt
+```
+
+
+<br />
+<br />
+
+
+ _____________________________________________________
+ _____________________________________________________
+
+
+<br />
+<br />
+
+
 # comment
 
 ## comment out multiple lines
