@@ -11,7 +11,7 @@ Bash Cheat Sheet with the most needed stuff..
 ## remove files/folder
 ```bash
 git rm -f sample.txt
-git rm -f folder
+git rm -rf folder
 ```
 
 
