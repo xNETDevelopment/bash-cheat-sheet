@@ -242,6 +242,14 @@ if [ -f "sample.txt" ]
 fi
 ```
 
+## check if folder not exist
+``` bash
+if [ ! -d "$PROJECTNAME" ]
+  then printf "\n Repo $PROJECTNAME folder does not exist..\n"
+  else printf "\n Repo $PROJECTNAME folder already exist..\n"
+fi
+```
+
 <br />
 <br />
 
