@@ -77,8 +77,7 @@ gnome-terminal -- yourscript.sh
  _____________________________________________________
 
 
-<br />
-<br />
+<br><br>
 
 
 # variables
@@ -87,6 +86,16 @@ INTRO=./intros/*
 CPUCORES=1
 ```
 
+<br><br>
+
+
+# concate variables
+```bash
+tempDIR="$PROJECTNAME-$DATE"
+```
+<br><br>
+
+  
 
 ## create variable of echo
 ```bash
