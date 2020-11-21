@@ -6,6 +6,28 @@ Bash Cheat Sheet with the most needed stuff..
 <br><br>
 
 
+# functions
+
+## Passing Arguments
+```bash
+CD(){
+cd "$1"; printf "\nCD() - We will display now the current directory used:"; pwd
+}
+
+CD $PATH
+```
+
+<br />
+<br />
+
+
+ _____________________________________________________
+ _____________________________________________________
+
+
+<br />
+<br />
+
 # delete
 
 ## remove files/folder
