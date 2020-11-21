@@ -6,6 +6,28 @@ Bash Cheat Sheet with the most needed stuff..
 <br><br>
 
 
+# comment
+
+## comment out multiple lines
+```bash
+: '
+lorum ipsum
+sample text..
+'
+```
+
+<br />
+<br />
+
+
+ _____________________________________________________
+ _____________________________________________________
+
+
+<br />
+<br />
+
+
 ## cd current directory
 ```bash
 cd "$(dirname "$0")"; printf "\nCurrent working directory:"; pwd
