@@ -334,6 +334,9 @@ printf "\n match: ${BASH_REMATCH[0]}";
 ## Replace text and create new variable
 ```bash
 PROJECTNAME=$(echo ${BASH_REMATCH[0]} | sed 's/oldtext/newtext/g')
+
+# use regex
+PROJECTNAME=$(echo ${BASH_REMATCH[0]} | sed -E 's/^coolregex$/newtext/g')
 ```
 
 
