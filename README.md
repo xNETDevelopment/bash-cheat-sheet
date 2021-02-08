@@ -180,11 +180,15 @@ git rm -rf folder
 
 # comment
 
+<br><br>
 
 ## comment single line
 ```bash
 # any comment here..
 ```
+
+<br><br>
+
 
 ## comment multiple lines
 ```bash
@@ -557,6 +561,38 @@ recursiverm() {
 }
 
 (cd $PROJECTPATH; recursiverm)
+
+
+
+
+
+
+
+
+# method #2
+: '
+-r or -R is recursive,
+-n is line number, and
+-w stands for match the whole word.
+-l (lower-case L) can be added to just give the file name of matching files.
+-e is the pattern used during the search
+'
+
+S3REGEX="s3[-]eu[-]central"
+MATCHES="$(grep --exclude=\*.{jpg,png} -rnw $PROJECTPATH -e $S3REGEX)"
+
+echo $MATCHES | while read line
+do
+    echo "Current line: $line"
+    #echo "Current file path: "; pwd
+
+    filename=$(basename -- "$1")
+    #echo "Current FULL file name: $filename"
+
+    extension=${filename##*.}
+    #echo "Current file extension: $extension"
+
+done
 ```
 
 
