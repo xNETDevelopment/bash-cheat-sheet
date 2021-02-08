@@ -40,7 +40,6 @@ CD $PATH
 <br><br>
 
 # read file
-- Put this on the first line of your script to tell in which way you want to execute the script.
 ```bash
 cat file | while read line
 do
