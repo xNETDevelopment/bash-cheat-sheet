@@ -519,22 +519,11 @@ recursiverm() {
  _____________________________________________________
 <br><br>
 
-# Statements
+# Conditions
 
 
 
-<br><br>
 
-## check if value is bla or not
-``` bash
-phone_missing=false
-if [ "$phone_missing" != false ]; then
-    echo "phone_missing is not 'false' (but may be non-true, too)"
-fi
-if [ "$phone_missing" == true ]; then
-    echo "phone_missing is true."
-fi
-```
 
 <br><br>
 
@@ -561,6 +550,47 @@ fi
 # method 2 - 1 liner if else
 [ -d $REPONAME ] && repoExist || repoNotExist;
 ```
+
+<br><br>
+
+## if else multiple conditions
+- You can use either [[ or (( keyword. When you use [[ keyword, you have to use string operators such as -eq, -lt. I think, (( is most preferred for arithmetic, because you can directly use operators such as ==, < and >.
+``` bash
+# Using [[ operator
+a=$1
+b=$2
+if [[ a -eq 1 || b -eq 2 ]] || [[ a -eq 3 && b -eq 4 ]]
+then
+     echo "Error"
+else
+     echo "No Error"
+fi
+
+
+# Using (( operator
+a=$1
+b=$2
+if (( a == 1 || b == 2 )) || (( a == 3 && b == 4 ))
+then
+     echo "Error"
+else
+     echo "No Error"
+fi
+```
+
+<br><br>
+
+## check if value is bla or not
+``` bash
+phone_missing=false
+if [ "$phone_missing" != false ]; then
+    echo "phone_missing is not 'false' (but may be non-true, too)"
+fi
+if [ "$phone_missing" == true ]; then
+    echo "phone_missing is true."
+fi
+```
+
 
 <br><br>
 
