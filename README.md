@@ -333,7 +333,7 @@ printf "\n match: ${BASH_REMATCH[0]}";
 
 ## Replace text and create new variable
 ```bash
-PROJECTNAME=$(echo ${BASH_REMATCH[0]} | sed 's/.git//g')
+PROJECTNAME=$(echo ${BASH_REMATCH[0]} | sed 's/oldtext/newtext/g')
 ```
 
 
