@@ -29,6 +29,46 @@ CD $PATH
 
 
 
+
+
+
+
+
+<br><br>
+ _____________________________________________________
+ _____________________________________________________
+<br><br>
+
+# read file
+- Put this on the first line of your script to tell in which way you want to execute the script.
+```bash
+cat file | while read line
+do
+  echo "a line: $line"
+done
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <br><br>
  _____________________________________________________
  _____________________________________________________
