@@ -523,6 +523,21 @@ recursiverm() {
 
 
 
+<br><br>
+
+## check if value is bla or not
+``` bash
+phone_missing=false
+if [ "$phone_missing" != false ]; then
+    echo "phone_missing is not 'false' (but may be non-true, too)"
+fi
+if [ "$phone_missing" == true ]; then
+    echo "phone_missing is true."
+fi
+```
+
+<br><br>
+
 ## if else
 ``` bash
 # method 1
@@ -547,6 +562,8 @@ fi
 [ -d $REPONAME ] && repoExist || repoNotExist;
 ```
 
+<br><br>
+
 ## check if folder exist (-d)
 ``` bash
 # method 1
@@ -559,6 +576,8 @@ fi
 [ -d $PROJECTNAME/.git ] && rm -rf $PROJECTNAME/.git;
 ```
 
+<br><br>
+
 ## check if file exist (-f)
 ``` bash
 # method 1
@@ -570,6 +589,8 @@ fi
 # method 2
 [ -f $PROJECTNAME/.sample.txt ] && rm -f $PROJECTNAME/.sample.txt;
 ```
+
+<br><br>
 
 ## check if folder not exist
 ``` bash
