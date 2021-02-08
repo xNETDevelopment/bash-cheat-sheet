@@ -476,6 +476,36 @@ echo "font for loop was done.."
 
 
 
+<br><br>
+
+## Select files from folder recursive
+```bash
+#!/bin/sh
+PROJECTPATH=~/Projects/gitlab/example
+
+recursiverm() {
+  for d in *;
+  do
+    if [ -d "$d" ]; then
+      (cd -- "$d" && recursiverm)
+    fi
+    echo "Current file path: "; pwd
+
+    filename=$(basename -- "$d")
+    echo "Current FULL file name: $filename"
+
+    extension=${filename##*.}
+    echo "Current file extension: $extension"
+  done
+}
+
+(cd $PROJECTPATH; recursiverm)
+```
+
+
+
+
+
 
 
 
