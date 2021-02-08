@@ -763,7 +763,7 @@ fi
 ## Create array
 ```bash
 # method 1
-declare -a introAR=()
+declare -a FontColor=()
 
 #method 2
 FontColor[0]='yellow'
@@ -777,7 +777,7 @@ FontColor[5]='purple'
 
 ## Push items into array
 ```bash
-    SRC=/home/t33n/Downloads/vidz/*
+    SRC=/home/usernamehere/Downloads/vidz/*
     for INTRO in $SRC
     do
 
