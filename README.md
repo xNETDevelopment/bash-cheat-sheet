@@ -759,6 +759,7 @@ fi
 
 # Array
 
+<br><br>
 
 ## Create array
 ```bash
@@ -774,6 +775,21 @@ FontColor[4]='blue'
 FontColor[5]='purple'
 ```
 
+<br><br>
+
+## Create array from string
+```bash
+# split by spaces
+string="1 2 3 4 5"
+declare -a array=($string)
+
+# split by custom character
+string="1,2,3,4,5"
+delimiter=","
+declare -a array=($(echo $string | tr "$delimiter" " "))
+```
+
+<br><br>
 
 ## Push items into array
 ```bash
@@ -786,6 +802,7 @@ FontColor[5]='purple'
     done
 ```
 
+<br><br>
 
 ## get random item from array
 ```bash
