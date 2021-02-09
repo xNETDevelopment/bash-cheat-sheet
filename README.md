@@ -32,7 +32,19 @@ AmountOfMatches=2
 ```
 
 
+<br><br>
 
+## create variable with command inside
+```bash
+isDirectory=$([[ -d $SourcePath ]] && echo true)
+```
+
+<br><br>
+
+## create variable with command inside and run as sudo
+```bash
+isDirectory=$(sudo bash -c "[[ -d $SourcePath ]] && echo true")
+```
 
 
 
@@ -1054,6 +1066,14 @@ FontColor[2]='green'
 FontColor[3]='red'
 FontColor[4]='blue'
 FontColor[5]='purple'
+```
+
+
+<br><br>
+
+## Delete duplicates from array
+```bash
+clearedarray=( `for i in ${unclearedarray[@]}; do echo $i; done | sort -u` )
 ```
 
 <br><br>
