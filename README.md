@@ -74,6 +74,47 @@ createPath "${array[@]}"
 
 
 
+
+<br><br>
+ _____________________________________________________
+ _____________________________________________________
+<br><br>
+
+# number
+
+<br><br>
+
+## increase number
+```bash
+AmountOfMatches=1
+
+for link in "${array[@]}"
+do
+  let "AmountOfMatches++"
+  printf "\n AmountOfMatches: $AmountOfMatches"
+done
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <br><br>
  _____________________________________________________
  _____________________________________________________
