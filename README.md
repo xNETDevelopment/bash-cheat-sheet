@@ -692,6 +692,36 @@ fi
 ```
 
 
+
+
+
+<br><br>
+
+## check if variable is longer than specific character limit
+``` bash
+if [[ ${#detect} -gt 8 ]] ; then
+    echo "Greater than 8 characters we exit now..."
+    exit 1
+else
+    echo "Good to go..."
+    exit 0
+fi
+```
+
+<br><br>
+
+
+
+
+
+
+
+
+
+
+
+
+
 <br><br>
 
 ## check if folder exist (-d)
