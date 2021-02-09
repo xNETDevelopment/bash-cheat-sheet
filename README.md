@@ -6,6 +6,76 @@ Bash Cheat Sheet with the most needed stuff..
 <br><br>
 
 
+
+
+
+
+
+
+
+# variable
+
+<br><br>
+
+## create variable
+```bash
+AmountOfMatches=1
+Names='Peter'
+```
+
+<br><br>
+
+## re-assign variable
+```bash
+AmountOfMatches=1
+AmountOfMatches=2
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br><br>
+ _____________________________________________________
+ _____________________________________________________
+<br><br>
+
+
 # functions
 
 <br><br>
