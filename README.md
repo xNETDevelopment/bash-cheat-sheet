@@ -8,13 +8,53 @@ Bash Cheat Sheet with the most needed stuff..
 
 # functions
 
-## Passing Arguments
+<br><br>
+
+## Passing String as Argument
 ```bash
-CD(){
-cd "$1"; printf "\nCD() - We will display now the current directory used:"; pwd
+PATH='/mnt/temp'
+
+coolFunction(){
+cd "$1"
+printf "We will display now the current directory used:"; pwd
 }
 
-CD $PATH
+coolFunction $PATH
+```
+
+<br><br>
+
+## Passing Array as Argument
+```bash
+# ---- Method #1 -----
+array=("one" "two" "three")
+
+createPath() {
+  for path in "$@"
+  do
+    printf "\n Current path: $path"
+  done
+}
+
+createPath "${array[@]}"
+
+
+
+
+
+
+# ---- Method #2 -----
+array=("one" "two" "three")
+
+createPath() {
+  arr=("$@")
+  for path in "${arr[@]}"
+  do
+    printf "\n Current path: $path"
+  done
+}
+
+createPath "${array[@]}"
 ```
 
 
