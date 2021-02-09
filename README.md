@@ -209,6 +209,59 @@ git rm -rf folder
 
 
 
+<br><br>
+ _____________________________________________________
+ _____________________________________________________
+<br><br>
+
+# create
+
+<br><br>
+
+## folder
+
+<br><br>
+
+#### create folder
+```bash
+mkdir /anyfolder
+```
+
+<br><br>
+
+#### create folder recursive
+```bash
+mkdir -p /anyfolder/path/here
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
