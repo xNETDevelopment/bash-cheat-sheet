@@ -530,18 +530,27 @@ cd "$(dirname "$0")"; printf "\nCurrent working directory:"; pwd
 
 ## use in condition
 ```bash
-#!/bin/bash
-
-# Only continue for 'develop' or 'release/*' branches
 BRANCH_REGEX="^(develop$|release//*)"
-
 if [[ $BRANCH =~ $BRANCH_REGEX ]];
 then
     echo "BRANCH '$BRANCH' matches BRANCH_REGEX '$BRANCH_REGEX'"
 else
     echo "BRANCH '$BRANCH' DOES NOT MATCH BRANCH_REGEX '$BRANCH_REGEX'"
 fi
+
+
+
+# example #2 - If regex does not match
+BRANCH_REGEX="^(develop$|release//*)"
+if [[ ! $BRANCH =~ $BRANCH_REGEX ]];
+then
+    echo "BRANCH '$BRANCH' DOES NOT MATCH BRANCH_REGEX '$BRANCH_REGEX'"
+else
+    echo "BRANCH '$BRANCH' matches BRANCH_REGEX '$BRANCH_REGEX'"
+fi
 ```
+
+
 <br><br>
 
 ## match something and return to variable
