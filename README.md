@@ -1077,6 +1077,16 @@ FontColor[4]='blue'
 FontColor[5]='purple'
 ```
 
+<br><br>
+
+## Access specific element from array
+```bash
+string="1 2 3 4 5"
+declare -a array=($string)
+printf "\n First element: ${array[0]}" # will print 1
+```
+
+
 
 <br><br>
 
