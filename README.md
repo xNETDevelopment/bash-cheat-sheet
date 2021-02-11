@@ -57,7 +57,7 @@ AmountOfMatches=$(($AmountOfMatches + $result))
 ## create variable
 ```bash
 AmountOfMatches=1
-Names='Peter'
+Names="Peter"
 ```
 
 <br><br>
