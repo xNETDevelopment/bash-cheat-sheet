@@ -11,6 +11,43 @@ Bash Cheat Sheet with the most needed stuff..
 
 
 
+# string
+
+<br><br>
+
+## convert string to number
+```bash
+AmountOfMatches=0
+result="2"
+AmountOfMatches=$(($AmountOfMatches + $result))
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br><br>
+ _____________________________________________________
+ _____________________________________________________
+<br><br>
+
 
 
 # variable
