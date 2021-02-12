@@ -1346,6 +1346,17 @@ FontColor[5]='purple'
 
 <br><br>
 
+
+## Print array
+```bash
+printf "\n Names of matched s3 links: ${matchedNamesAR[*]}"
+```
+
+<br><br>
+
+
+
+
 ## Access specific element from array
 ```bash
 string="1 2 3 4 5"
