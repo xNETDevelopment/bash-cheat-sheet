@@ -820,6 +820,15 @@ printf "\n match: ${BASH_REMATCH[0]}";
 
 
 
+<br><br>
+
+## match something in file
+```bash
+resultNames=$(cat $JSONfile | grep -ohE $RegexMatchS3)
+printf "\n Links of the matched s3 files: $resultNames"
+```
+
+
 
 
 
