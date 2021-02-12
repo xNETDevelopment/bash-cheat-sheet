@@ -14,15 +14,24 @@ Nice2Know
 AmountOfMatches=0
 ConvertAndReplace() {
     for d in *; do
-        myNumber=1
-        export AmountOfMatches=$(($AmountOfMatches + $myNumber))
+
+        if [ -d "$d" ]; then
+          (cd -- "$d" && ConvertAndReplace) # <-- Created sub shell so we can later not re-assign AmountOfMatches
+        else
+
+          for f in *.bson;
+          do
+            resultAmount=$(cat $JSONfile | grep -E $RegexMatchS3Host | wc -l)
+            AmountOfMatches=$(($AmountOfMatches + $resultAmount))
+            printf "\n Inside check: $AmountOfMatches \n\n"
+          done
+
+        fi
+
     done
-    if [[ "$AmountOfMatches" == "4" ]]; then
-        (cd "$d" && ConvertAndReplace)
-    fi
 }
 ConvertAndReplace
-echo "$AmountOfMatches"
+printf "\n Amount of files where we found s3 links: $AmountOfMatches"
 
 
 
@@ -33,17 +42,26 @@ echo "$AmountOfMatches"
 AmountOfMatches=0
 ConvertAndReplace() {
     for d in *; do
-        myNumber=1
-        export AmountOfMatches=$(($AmountOfMatches + $myNumber))
+
+        if [ -d "$d" ]; then
+          pushd "$d"
+          ConvertAndReplace
+          popd
+        else
+
+          for f in *.bson;
+          do
+            resultAmount=$(cat $JSONfile | grep -E $RegexMatchS3Host | wc -l)
+            AmountOfMatches=$(($AmountOfMatches + $resultAmount))
+            printf "\n Inside check: $AmountOfMatches \n\n"
+          done
+
+        fi
+
     done
-    if [[ "$AmountOfMatches" == "4" ]]; then
-      pushd "$d"
-      ConvertAndReplace
-      popd
-    fi
 }
 ConvertAndReplace
-echo "$AmountOfMatches"
+printf "\n Amount of files where we found s3 links: $AmountOfMatches"
 ```
 
 
