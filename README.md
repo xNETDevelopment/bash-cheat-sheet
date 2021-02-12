@@ -7,6 +7,88 @@ Bash Cheat Sheet with the most needed stuff..
 
 
 
+Nice2Know
+- You can not change the values of parent shell variables when you inside of sub shells. As example:
+```bash
+# Not working
+AmountOfMatches=0
+ConvertAndReplace() {
+    for d in *; do
+        myNumber=1
+        export AmountOfMatches=$(($AmountOfMatches + $myNumber))
+    done
+    if [[ "$AmountOfMatches" == "4" ]]; then
+        (cd "$d" && ConvertAndReplace)
+    fi
+}
+ConvertAndReplace
+echo "$AmountOfMatches"
+
+
+
+
+
+
+# Working
+AmountOfMatches=0
+ConvertAndReplace() {
+    for d in *; do
+        myNumber=1
+        export AmountOfMatches=$(($AmountOfMatches + $myNumber))
+    done
+    if [[ "$AmountOfMatches" == "4" ]]; then
+      pushd "$d"
+      ConvertAndReplace
+      popd
+    fi
+}
+ConvertAndReplace
+echo "$AmountOfMatches"
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br><br>
+ _____________________________________________________
+ _____________________________________________________
+<br><br>
+
 
 
 
@@ -21,7 +103,6 @@ AmountOfMatches=0
 result="2"
 AmountOfMatches=$(($AmountOfMatches + $result))
 ```
-
 
 
 
@@ -194,6 +275,25 @@ createPath "${array[@]}"
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <br><br>
  _____________________________________________________
  _____________________________________________________
@@ -213,6 +313,109 @@ do
   printf "\n AmountOfMatches: $AmountOfMatches"
 done
 ```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br><br>
+ _____________________________________________________
+ _____________________________________________________
+<br><br>
+
+
+
+# cd
+
+<br><br>
+
+## cd to home directory
+```bash
+# method #1
+cd --
+
+# method #2
+cd ~
+```
+
+<br><br>
+
+## cd to specific path and then later go back to path where you cd
+```bash
+pushd ./anypath
+ConvertAndReplace
+popd
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
